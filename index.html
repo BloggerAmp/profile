@@ -220,7 +220,24 @@ article {
   </a>
 <amp-facebook-page width="552" height="310" layout="responsive" data-tabs="timeline, events" data-href="https://www.facebook.com/manishnetamofficial/">
 </amp-facebook-page>
-    
+   <amp-animation id="showAnim" layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "200ms",
+       "fill": "both",
+       "iterations": "1",
+       "direction": "alternate",
+       "animations": [
+         {
+           "selector": "#scrollToTopButton",
+           "keyframes": [
+             { "opacity": "1", "visibility": "visible" }
+           ]
+         }
+       ]
+    }
+  </script>
+</amp-animation> 
  <amp-iframe
   width="200"
   height="100"
