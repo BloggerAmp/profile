@@ -238,6 +238,24 @@ article {
     }
   </script>
 </amp-animation> 
+    <amp-animation id="hideAnim" layout="nodisplay">
+  <script type="application/json">
+    {
+     "duration": "200ms",
+       "fill": "both",
+       "iterations": "1",
+       "direction": "alternate",
+       "animations": [
+         {
+           "selector": "#scrollToTopButton",
+           "keyframes": [
+             { "opacity": "0", "visibility": "hidden" }
+           ]
+         }
+       ]
+   }
+  </script>
+</amp-animation>
  <amp-iframe
   width="200"
   height="100"
