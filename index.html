@@ -261,7 +261,20 @@ amp-fit-text {
   </script>
 </amp-animation>
     <button id="scrollToTopButton" on="tap:top.scrollTo(duration=200)" class="scrollToTop">⌃</button>
- <amp-iframe
+<amp-carousel layout="fixed-height" height="250" type="carousel" >
+    <amp-img src="blocky-mountains-1.jpg" width="300" height="250"></amp-img>
+
+    <amp-ad width="300" height="250"
+      type="doubleclick"
+      data-slot="/35096353/amptesting/image/static">
+        <div placeholder>This ad is still loading.</div>
+    </amp-ad>
+
+    <amp-fit-text width="300" height="250" layout="fixed">
+        Big, bold article quote goes here.
+    </amp-fit-text>
+</amp-carousel>
+    <amp-iframe
   width="200"
   height="100"
   sandbox="allow-scripts allow-same-origin"
