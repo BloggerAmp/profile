@@ -386,7 +386,58 @@ amp-list</p>
         Big, bold article quote goes here.
     </amp-fit-text>
 </amp-carousel>
-    
+    <section class="heading">
+      <h1>An AMP Live Blog</h1>
+      <p><small class="date">Fri July 22 2016</small></p>
+      <p><small>by Chiara Chiappini</small></p>
+      <p id="summary">This is a sample article demonstrating how to write a live blog in AMP. It demonstrates the usage of amp-live-list component which allows to create live blogs.</p>
+    </section>
+    <!-- ## Blog Posts -->
+    <!-- Use amp-live-list to implement a live blog. The amp-live-list component regularly polls the host document for updated content and updates the end user's browser as new items become available. This means that every time a new post needs to be added, the host document should be updated by the CMS to include the update both the body and the metadata section. Find an amp-live-list example [here](/documentation/examples/components/amp-live-list/).
+    Long blogs could use pagination to improve performance by limiting the number of blog items to be displayed on a page. To implement pagination, amp-live-list allows to add the `<div pagination></div>` element, to then insert any markup needed for pagination, for example the page number, a link to the next and previous page. -->
+    <amp-live-list
+    class="live-list"
+    layout="container"
+    data-poll-interval="15000"
+    data-max-items-per-page="5"
+    id="amp-live-list-insert-blog">
+
+      <button id ="live-list-update-button" update on="tap:amp-live-list-insert-blog.update">You have updates</button>
+      <div items>
+        [% for item in blogItems %]
+            <div id="[= item.id =]" data-sort-time="[= item.timestamp =]">
+              <div class="blog">
+                <amp-img src="[= item.img =]"
+                    layout="responsive" width="1280" height="853">
+                </amp-img>
+                <h4 class="title">[= item.heading =]</h4>
+                <p class="date">[= item.date =]</p>
+                <p class="text">[= item.text =]</p>
+                <p class="social-share">
+                  <amp-social-share type="twitter" width="45" height="33" data-param-url="AMPDOC_URL#[= item.id =]"></amp-social-share>
+                  <amp-social-share type="facebook" width="45" height="33" data-attribution="254325784911610" data-param-url="AMPDOC_URL#[= item.id =]"></amp-social-share>
+                  <amp-social-share type="gplus" width="45" height="33" data-param-url="AMPDOC_URL#[= item.id =]"></amp-social-share>
+                  <amp-social-share type="email" width="45" height="33" data-param-url="AMPDOC_URL#[= item.id =]"></amp-social-share>
+                  <amp-social-share type="pinterest" width="45" height="33" data-param-url="AMPDOC_URL#[= item.id =]"></amp-social-share>
+                </p>
+              </div>
+            </div>
+          [% endfor %]
+      </div>
+      <div pagination>
+        <nav aria-label="amp live list pagination">
+          <ul class="pagination">
+            [% if prevPageUrl %]
+              <li><a href="[= prevPageUrl =]">Prev</a></li>
+            [% endif %]
+            <li>[= pageNumber =]</li>
+            [% if nextPageUrl %]
+              <li><a href="[= nextPageUrl =]">Next</a></li>
+            [% endif %]
+          </ul>
+        </nav>
+      </div>
+    </amp-live-list>
  <P id="hello">© 2022 All Right Reserved.</p1>
   </body>
 </html>
