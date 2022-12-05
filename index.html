@@ -363,41 +363,7 @@ amp-fit-text {
 </h3>
 <div class="container">
 Post List</p>
-<amp-next-page>
-  <script type="application/json">
-    [
-      {
-        "title": "amp-img",
-        "image": "https://preview.amp.dev/static/samples/img/amp.jpg",
-        "url": "/documentation/examples/components/amp-img/"
-      },
-      {
-        "title": "amp-bind",
-        "image": "https://preview.amp.dev/static/samples/img/amp.jpg",
-        "url": "/documentation/examples/components/amp-bind/"
-      },
-      {
-        "title": "amp-accordion",
-        "image": "https://preview.amp.dev/static/samples/img/amp.jpg",
-        "url": "/documentation/examples/components/amp-accordion/"
-      },
-      {
-        "title": "amp-lightbox-gallery",
-        "image": "https://preview.amp.dev/static/samples/img/amp.jpg",
-        "url": "/documentation/examples/components/amp-lightbox-gallery/"
-      },
-      {
-        "title": "amp-list",
-        "image": "https://preview.amp.dev/static/samples/img/amp.jpg",
-        "url": "/documentation/examples/components/amp-list/"
-      }
-    ]
-  </script>
-  <div class="amp-next-page-sample-separator" separator>
-    amp-next-page separator
-  </div>
-</amp-next-page>
- 
+
 <amp-facebook-page width="300" height="300" layout="responsive" data-hide-cta="true" data-href="https://www.facebook.com/manishnetamofficial/">
 </amp-facebook-page> 
 <amp-facebook-comments width="552" height="310" layout="responsive" data-numposts="0"  data-order-by="social" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-locale="en_GB">
@@ -489,18 +455,51 @@ Post List</p>
                 </p>
               </div>
             </div>
-          [% endfor %]
+          
       </div>
       <div pagination>
         <nav aria-label="amp live list pagination">
           <ul class="pagination">
-            [% if prevPageUrl %]
+
               <li><a href="[= prevPageUrl =]">Prev</a></li>
-            [% endif %]
-            <li>[= pageNumber =]</li>
-            [% if nextPageUrl %]
+           
+            <amp-next-page>
+  <script type="application/json">
+    [
+      {
+        "title": "amp-img",
+        "image": "https://preview.amp.dev/static/samples/img/amp.jpg",
+        "url": "/documentation/examples/components/amp-img/"
+      },
+      {
+        "title": "amp-bind",
+        "image": "https://preview.amp.dev/static/samples/img/amp.jpg",
+        "url": "/documentation/examples/components/amp-bind/"
+      },
+      {
+        "title": "amp-accordion",
+        "image": "https://preview.amp.dev/static/samples/img/amp.jpg",
+        "url": "/documentation/examples/components/amp-accordion/"
+      },
+      {
+        "title": "amp-lightbox-gallery",
+        "image": "https://preview.amp.dev/static/samples/img/amp.jpg",
+        "url": "/documentation/examples/components/amp-lightbox-gallery/"
+      },
+      {
+        "title": "amp-list",
+        "image": "https://preview.amp.dev/static/samples/img/amp.jpg",
+        "url": "/documentation/examples/components/amp-list/"
+      }
+    ]
+  </script>
+  <div class="amp-next-page-sample-separator" separator>
+    amp-next-page separator
+  </div>
+</amp-next-page>
+ 
               <li><a href="[= nextPageUrl =]">Next</a></li>
-            [% endif %]
+            
           </ul>
         </nav>
       </div>
