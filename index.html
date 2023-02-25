@@ -2,6 +2,10 @@
 <html amp lang="en">
   <head>
 <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
  <meta property="fb:pages" content="869284079930595" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
@@ -307,7 +311,61 @@ amp-fit-text {
     <li><a href="#">Example 3</a></li>
   </ul>
 </amp-sidebar>
-    
+    <h1>
+
+    Instant Games Demos 
+
+  </h1>
+
+  <h2> 
+
+    Audience Network Monetization
+
+  </h2>
+
+  <div class="panel">
+
+    <img src="img/title_img.png" class="img-title" />
+
+  </div>
+
+  <div class="panel">
+
+    <p> Interstitial Ads Seen:
+
+    <span id="interstitial-amount"> 0 </span> </p>
+
+    <input type="button" 
+
+      id="btn-interstitial" 
+
+      onclick="showInterstitial();" 
+
+      value="Show Interstitial Ad" />
+
+  </div>
+
+  <br />
+
+  <div class="panel">
+
+    <p> Rewarded Videos Watched:
+
+    <span id="rewarded-amount"> 0 </span> </p>
+
+    <input type="button" 
+
+      id="btn-rewarded-video" 
+
+      onclick="showRewardedVideo();"
+
+      value= "Show Rewarded Video" />
+
+  </div>
+
+  <div id="error-messages">
+
+  </div>
    
 <h3 class="target">
   <a class="target-anchor" id="top"></a>
